@@ -1,0 +1,39 @@
+{
+    "Web Development": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "MongoDB",
+        "Git",
+        "REST API"
+    ],
+    "Data Science": [
+        "Python",
+        "Pandas",
+        "NumPy",
+        "Matplotlib",
+        "Statistics",
+        "SQL",
+        "Scikit-learn"
+    ],
+    "AI/ML": [
+        "Python",
+        "NumPy",
+        "Pandas",
+        "Scikit-learn",
+        "TensorFlow",
+        "Deep Learning",
+        "Matplotlib"
+    ],
+    "Cybersecurity": [
+        "Networking",
+        "Linux",
+        "Python",
+        "Cryptography",
+        "Nmap",
+        "Burp Suite",
+        "Wireshark"
+    ]
+}
