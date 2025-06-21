@@ -1,0 +1,43 @@
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environment
+venv/
+.env/
+.venv/
+ENV/
+env/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Output / Upload folders
+output/
+uploads/
+
+# Model files (optional: if you don’t want to version .pkl files)
+*.pkl
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# VSCode or IDE configs
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Render build cache
+.rbuild/
+
+# pycache inside any subfolders
+**/__pycache__/

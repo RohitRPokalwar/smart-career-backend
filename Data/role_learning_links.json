@@ -1,0 +1,22 @@
+{
+    "Web Development": [
+        "https://www.freecodecamp.org/",
+        "https://www.codecademy.com/learn/paths/web-development",
+        "https://www.w3schools.com/"
+    ],
+    "Data Science": [
+        "https://www.kaggle.com/learn/overview",
+        "https://www.coursera.org/specializations/jhu-data-science",
+        "https://www.datacamp.com/courses/tech:python"
+    ],
+    "AI/ML": [
+        "https://www.coursera.org/specializations/machine-learning-introduction",
+        "https://www.fast.ai/",
+        "https://www.edx.org/professional-certificate/harvardx-data-science"
+    ],
+    "Cybersecurity": [
+        "https://www.cybrary.it/course/introduction-to-it-and-cybersecurity/",
+        "https://www.udemy.com/course/the-complete-ethical-hacking-course/",
+        "https://www.sans.org/cyber-security-courses/"
+    ]
+}
