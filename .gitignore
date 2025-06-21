@@ -18,7 +18,6 @@ output/
 uploads/
 
 # Model files (optional: if you don’t want to version .pkl files)
-*.pkl
 
 # OS-specific files
 .DS_Store
