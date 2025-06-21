@@ -50,10 +50,17 @@ def upload_resume():
         return jsonify({"error": "Missing file or role"}), 400
 
     file = request.files['file']
-    role = request.form['role'].lower()
+    input_role = request.form['role'].strip().lower()
 
-    if role not in role_skills:
+    # Normalize roles to avoid case mismatch
+    normalized_roles = {r.lower(): r for r in role_skills}
+
+    if input_role not in normalized_roles:
+        print("❌ Invalid role:", input_role)
+        print("🧠 Available roles:", list(role_skills.keys()))
         return jsonify({"error": "Invalid role"}), 400
+
+    role_key = normalized_roles[input_role]
 
     if not file.filename.endswith(".pdf"):
         return jsonify({"error": "Only PDF files are supported"}), 400
@@ -65,15 +72,15 @@ def upload_resume():
 
     # Extract text and skills
     text = extract_text_from_pdf(save_path)
-    known_skills = role_skills[role]
+    known_skills = role_skills[role_key]
     resume_skills = extract_skills(text, known_skills)
 
     matched = resume_skills
     missing = [s for s in known_skills if s.lower() not in matched]
-    resources = learning_links.get(role, [])
+    resources = learning_links.get(role_key, [])
 
     # Save report
-    save_report(role, matched, missing, resources)
+    save_report(role_key, matched, missing, resources)
 
     # Clean up uploaded file
     try:
@@ -83,7 +90,7 @@ def upload_resume():
         print(f"⚠️ Failed to delete uploaded file: {e}")
 
     return jsonify({
-        "role": role,
+        "role": role_key,
         "skills_matched": matched,
         "skills_missing": missing,
         "resources": resources
