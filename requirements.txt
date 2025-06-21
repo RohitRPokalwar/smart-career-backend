@@ -5,3 +5,4 @@ pandas
 numpy
 PyMuPDF
 spacy
+gunicorn
